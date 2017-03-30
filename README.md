@@ -1,8 +1,19 @@
-# DS New Object
+# Vue-element 项目
 
-> A Vue.js project
+> 基于Vue2.0的Element框架
 
-## Build Setup
+## 结构说明
+
+> 所用插件说明
+
++ vue2.0
++ vue-router2.0
++ vuex
++ axios
++ element-ui
++ webpack
+
+## 构建命令
 
 ``` bash
 # install dependencies
