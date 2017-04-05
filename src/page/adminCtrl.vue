@@ -99,7 +99,7 @@
     </div>
 </template>
 <script>
-import select2 from "../../component/select2";
+import select2 from "../../component/select2/select2";
 module.exports = {
     data() {
         return {

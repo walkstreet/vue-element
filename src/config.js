@@ -1,11 +1,11 @@
 var protocol = 'http';
 var httpsProtocol = 'https';
 
-var picHost = 'http://ocg52umra.bkt.clouddn.com/';
-var pic1Host = 'https://pic1.click-v.com/';
+var picHost = '';
+var pic1Host = '';
 var resourcesBaseUrl = picHost;
 
-var apiUrl = 'devadmin2.click-v.com';
+var apiUrl = '';
 
 var apiBaseurl = protocol + '://' + apiUrl + '/ds-admin/';
 

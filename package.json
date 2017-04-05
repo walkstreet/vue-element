@@ -2,7 +2,7 @@
   "name": "op",
   "version": "1.0.0",
   "description": "operation platform crm",
-  "author": "yanqing <qing.yan@click-v.com>",
+  "author": "yanqing <qingskybabe@qq.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
