@@ -18,11 +18,17 @@ import "../node_modules/animate.css";
 //路由配置文件
 import "./router.js";
 
+//自定义插件，表单验证
+import validate from "../component/validate/validate";
+
 //使用数据流
 Vue.use(Vuex);
 
 //使用vue-cookie
 Vue.use(VueCookie);
+
+//使用表单验证插件
+Vue.use(validate);
 
 //config的配置作为全局参数
 import "./config.js";

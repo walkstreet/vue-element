@@ -9,7 +9,7 @@
             <el-row class="section search">
                 <el-col :span="6" class="search-col">
                     <label>角色名称</label>
-                    <el-input v-model="input" placeholder="输入角色名称"></el-input>
+                    <el-input v-uname="input" v-model="input" placeholder="输入角色名称"></el-input>
                 </el-col>
                 <el-col :span="6" class="search-col">
                     <label>起始日期</label>
@@ -147,7 +147,7 @@ module.exports = {
         'select2': select2
     },
     mounted(){
-
+        
     },
     methods: {
         searchTable(){
