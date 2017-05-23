@@ -6,7 +6,7 @@ const Validate = {
                 console.log("bind");
             },
             update(el, binding, vnode, oldVnode) {
-                console.log();
+                
             }
         })
     }
