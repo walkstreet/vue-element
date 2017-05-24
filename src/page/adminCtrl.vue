@@ -13,26 +13,18 @@
                 </el-col>
                 <el-col :span="6" class="search-col">
                     <label>起始日期</label>
-                    <el-date-picker
-                        v-model="startDate"
-                        type="date"
-                        placeholder="请选择角色创建日期"
-                        :picker-options="pickerOptions0">
+                    <el-date-picker v-model="startDate" type="date" placeholder="请选择角色创建日期" :picker-options="pickerOptions0">
                     </el-date-picker>
                 </el-col>
                 <el-col :span="6" class="search-col">
                     <label>角色</label>
-                    <el-date-picker
-                        v-model="endDate"
-                        type="date"
-                        placeholder="请选择角色创建日期"
-                        :picker-options="pickerOptions0">
+                    <el-date-picker v-model="endDate" type="date" placeholder="请选择角色创建日期" :picker-options="pickerOptions0">
                     </el-date-picker>
                 </el-col>
                 <el-col :span="6" class="search-col">
                     <label>&nbsp;</label>
                     <el-button type="primary" @click="searchTable">查询</el-button>
-                    <el-button>重置</el-button>
+                    <el-button @click="resetForm">重置</el-button>
                 </el-col>
                 <!-- 自定义组件 -->
                 <el-col :span="12" class="search-col">
@@ -45,53 +37,27 @@
                 <div class="section-head">角色列表</div>
                 <div class="section-action">
                     <el-button type="info">新增角色</el-button>
-                    <el-button type="danger">批量删除</el-button>    
+                    <el-button type="danger">批量删除</el-button>
                 </div>
                 <div class="section-body">
-                    <el-table
-                        v-loading="false"
-                        :data="tableData3"
-                        border
-                        style="width: 100%"
-                        @selection-change="handleSelectionChange">
-                        <el-table-column
-                            type="selection"
-                            width="55">
+                    <el-table v-loading="false" :data="tableData3" border style="width: 100%" @selection-change="handleSelectionChange">
+                        <el-table-column type="selection" width="55">
                         </el-table-column>
-                        <el-table-column
-                            label="日期"
-                            width="120">
+                        <el-table-column label="日期" width="120">
                             <template scope="scope">{{ scope.row.date }}</template>
                         </el-table-column>
-                        <el-table-column
-                            prop="name"
-                            label="姓名"
-                            width="120">
+                        <el-table-column prop="name" label="姓名" width="120">
                         </el-table-column>
-                        <el-table-column
-                            prop="address"
-                            label="地址"
-                            show-overflow-tooltip>
+                        <el-table-column prop="address" label="地址" show-overflow-tooltip>
                         </el-table-column>
-                        <el-table-column
-                            fixed="right"
-                            label="操作"
-                            width="100">
+                        <el-table-column fixed="right" label="操作" width="100">
                             <template scope="scope">
                                 <el-button @click="handleClick" type="text" size="small">查看</el-button>
                                 <el-button type="text" size="small">编辑</el-button>
                             </template>
                         </el-table-column>
                     </el-table>
-                    <el-pagination
-                        @size-change="handleSizeChange"
-                        @current-change="handleCurrentChange"
-                        :current-page="currentPage4"
-                        :page-sizes="[20, 50, 100]"
-                        :page-size="20"
-                        layout="total, sizes, prev, pager, next, jumper"
-                        :total="400"
-                        class="pagination">
+                    <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currentPage4" :page-sizes="[20, 50, 100]" :page-size="20" layout="total, sizes, prev, pager, next, jumper" :total="400" class="pagination">
                     </el-pagination>
                 </div>
             </div>
@@ -106,10 +72,10 @@ module.exports = {
             startDate: "",
             endDate: "",
             roleList: [
-                
+
             ],
             selectList: [
-                
+
             ],
             tableData3: [{
                 date: '2016-05-03',
@@ -146,50 +112,53 @@ module.exports = {
     components: {
         'select2': select2
     },
-    mounted(){
-        
+    mounted() {
+
     },
     methods: {
-        searchTable(){
+        searchTable() {
             console.log(this.roleList);
         },
-        onKeyUp(val){ //输入字符后的回调，可请求接口,val是输入框的值
+        onKeyUp(val) { //输入字符后的回调，可请求接口,val是输入框的值
             this.selectList = [];
             let count = 0;
-            this.selectList.splice(this.selectList.length,1,
+            this.selectList.splice(this.selectList.length, 1,
                 {
-                    id:count++,
-                    name:"你好"
+                    id: count++,
+                    name: "你好"
                 },
                 {
-                    id:count++,
-                    name:"你好"
+                    id: count++,
+                    name: "你好"
                 },
                 {
-                    id:count++,
-                    name:"你好"
+                    id: count++,
+                    name: "你好"
                 },
                 {
-                    id:count++,
-                    name:"你好"
+                    id: count++,
+                    name: "你好"
                 },
                 {
-                    id:count++,
-                    name:"你好"
+                    id: count++,
+                    name: "你好"
                 },
                 {
-                    id:count++,
-                    name:"你好"
+                    id: count++,
+                    name: "你好"
                 },
                 {
-                    id:count++,
-                    name:"你好"
+                    id: count++,
+                    name: "你好"
                 },
                 {
-                    id:count++,
-                    name:"你好"
+                    id: count++,
+                    name: "你好"
                 }
             )
+        },
+        resetForm() {
+            this.$toast('1');
         }
     }
 }

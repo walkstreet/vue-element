@@ -21,6 +21,9 @@ import "./router.js";
 //自定义插件，表单验证
 import validate from "../component/validate/validate";
 
+//toast提示框
+import toast from "../component/toast/toast";
+
 //使用数据流
 Vue.use(Vuex);
 
@@ -29,6 +32,9 @@ Vue.use(VueCookie);
 
 //使用表单验证插件
 Vue.use(validate);
+
+//使用toast提示框
+Vue.use(toast);
 
 //config的配置作为全局参数
 import "./config.js";

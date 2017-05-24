@@ -1,12 +1,14 @@
 const Validate = {
     install(Vue){
-        Vue.prototype.$myName = "shanghai";
+        Vue.prototype.$myName = {
+            error(option) {
+                console.log();
+            }
+        };
         Vue.directive("uname", {
             bind(){
-                console.log("bind");
-            },
-            update(el, binding, vnode, oldVnode) {
-                
+                // stuff
+
             }
         })
     }
