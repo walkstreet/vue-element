@@ -158,7 +158,7 @@ module.exports = {
             )
         },
         resetForm() {
-            this.$toast('1');
+            this.$toast.center('Hello World');
         }
     }
 }
