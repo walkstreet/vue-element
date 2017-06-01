@@ -8,9 +8,14 @@ const Login = r => require.ensure([], () => r(require("./page/login")), "/group"
 const NormalLayOut = r => require.ensure([], () => r(require("./page/normalLayOut")), "/group"); //默认通用layout
 const roleContrl = r => require.ensure([], () => r(require("./page/roleCtrl")), "/group"); //实例1
 const adminControl = r => require.ensure([], () => r(require("./page/adminCtrl")), "/group"); //实例2
+const example = r => require.ensure([], () => r(require("./page/example")), "/group"); //实例3
 
 //定义路由跳转
 const routes = [
+    {
+        path: "*",
+        redirect: "/default/index"  //默认重定向到欢迎页
+    },
     {
         path: "/",
         redirect: "/default/index"  //默认重定向到欢迎页
@@ -37,6 +42,10 @@ const routes = [
           {
               path: "/system/adminControl",
               component: adminControl  //管理员管理
+          },
+          {
+              path: "/system/example",
+              component: example  //组件实例
           }
         ]
     }

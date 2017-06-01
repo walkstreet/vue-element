@@ -12,6 +12,10 @@
 + Webpack则加入了图片转dataurl处理及sass/scss
 + 支持ES6及ES6+
 
+## 新增补充
++ 插件toast，component 6/1
++ slot内容分发组件 6/1
+
 ## 结构说明
 
 > 所用插件说明

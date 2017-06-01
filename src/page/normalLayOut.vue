@@ -149,6 +149,10 @@
                             {
                                 "index":"/system/adminControl",
                                 "name": "操作员管理"
+                            },
+                            {
+                                "index":"/system/example",
+                                "name": "组件实例"
                             }
                         ]
                     }
