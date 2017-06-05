@@ -19,7 +19,7 @@
                         <select2 placeholder="请输入权限" v-model="roleList" :select-list="selectList" @keyUpCallBack="onKeyUp"></select2>
                     </el-col>
                     <el-col :span="6">
-                        <el-button type="text" @click="openSelect">查询已选择数组</el-button>
+                        <el-button type="primary" @click="openSelect">查询已选择数组</el-button>
                     </el-col>
                 </el-row>
             </div>
@@ -28,6 +28,15 @@
                 <slotter text="第一层">
                     <slot2 text="第二层"></slot2>
                 </slotter>
+            </div>
+            <div class="section">
+                <h2>validate</h2>
+                <p>
+                    <label>用户名:</label>
+                    <input type="text" v-uname:user='{value: validateInput,required: true}' v-model="validateInput">
+                    <label v-if="$validate.user">用户名不正确</label>
+                </p>
+                <el-button type="primary" @click="openValidate">查询</el-button>
             </div>
         </div>
     </div>
@@ -56,7 +65,8 @@
                     date: '2016-05-07',
                     name: '王小虎',
                     address: '上海市普陀区金沙江路 1518 弄'
-                }]
+                }],
+                validateInput: ""
             }
         },
         computed: {
@@ -91,6 +101,17 @@
             },
             openSelect() {
                 this.$alert(this.roleList, 'select2', {
+                    confirmButtonText: '确定',
+                    callback: action => {
+                        this.$message({
+                            type: 'info',
+                            message: `action: ${ action }`
+                        });
+                    }
+                });
+            },
+            openValidate() {
+                this.$alert(this.validateInput, 'validate', {
                     confirmButtonText: '确定',
                     callback: action => {
                         this.$message({

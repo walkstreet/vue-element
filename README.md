@@ -12,10 +12,6 @@
 + Webpack则加入了图片转dataurl处理及sass/scss
 + 支持ES6及ES6+
 
-## 新增补充
-+ 插件toast，component 6/1
-+ slot内容分发组件 6/1
-
 ## 结构说明
 
 > 所用插件说明
@@ -45,3 +41,11 @@ npm run dev
 # build for production with minification
 npm run build
 ```
+
+## 更新日志
+> 2017年6月1日
++ 插件toast
++ slot内容分发Example
+
+> 2017年6月5日
++ validate表单验证插件Example
